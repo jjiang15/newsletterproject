@@ -1,0 +1,5 @@
+This file is to help explain to the agent(s) I want to build the purpose of this project. 
+
+Problem: I receive too many newsletters (news updates, climate tech ecosystem updates, clean energy updates) that I don't have time to read through - and I don't like their writing style as much. 
+
+Solution: I want to build a daily newsletter that pulls the newsletters from my inbox every day along with web searches of top news sites (WSJ, NYT) with a short section on the most major stories of the day in terms of economy, global affairs, etc. then the rest of the newsletter on clean energy and clean tech news. I've included in this folder my own writing samples to give a sense of how I write (more lyrical, soft) - it doesn't need to sound like this b/c it is business news of course, but I heavily dislike the typical AI writing style.

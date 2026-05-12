@@ -348,7 +348,7 @@ def main():
     full_html = wrap_html(body_html, today, tagline=subject)
 
     print("Sending email...")
-    send_email(service, f"{subject} · {today}", full_html)
+    send_email(service, f"Good Morning Janna! {subject} · {today}", full_html)
     print("Done.")
 
 
