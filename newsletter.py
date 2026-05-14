@@ -130,7 +130,7 @@ def web_search(queries):
     results = []
     with DDGS() as ddgs:
         for query in queries:
-            hits = list(ddgs.text(query, max_results=4))
+            hits = list(ddgs.text(query, max_results=4, timelimit='w'))
             for h in hits:
                 results.append(f"Title: {h['title']}\nURL: {h['href']}\nSummary: {h['body']}")
     return results
@@ -196,6 +196,7 @@ SECTION 3 — "AI" (3–4 stories):
 - Focus on product launches, model releases, enterprise deals, and policy — not hype
 
 Writing rules (follow precisely):
+- Only include stories from {today}. If a source is clearly from a prior year (e.g., 2025 or earlier), skip it entirely — do not include it.
 - Every story must be about a specific named event, decision, number, or person. No vague summaries.
 - Never describe a newsletter, publication, or its audience — write the actual news inside it. Subscriber counts, publication cadence, and readership descriptions are never news.
 - Never write meta-commentary about what a publication is covering (e.g., "WSJ leads with..." or "headlines reflect uncertainty"). Write the actual news.
@@ -348,7 +349,7 @@ def main():
     full_html = wrap_html(body_html, today, tagline=subject)
 
     print("Sending email...")
-    send_email(service, f"Good Morning Janna! {subject} · {today}", full_html)
+    send_email(service, f"Good Morning Janna! · {today}", full_html)
     print("Done.")
 
 
